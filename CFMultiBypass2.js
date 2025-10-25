@@ -68,7 +68,7 @@ cloudscraper.get(target, function (error, response) {
 var int = setInterval(() => {
 	if (cookie !== "") {
 		var s = require("net").Socket();
-		s.connect(80, host);
+		s.connect(443, host);
 		s.setTimeout(10000);
 
 		for (var i = 0; i < 50; i++) {
@@ -93,4 +93,5 @@ process.on("uncaughtException", function (err) {
 
 process.on("unhandledRejection", function (err) {
 	console.log(err);
+
 });
